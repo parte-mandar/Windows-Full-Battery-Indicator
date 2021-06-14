@@ -12,6 +12,6 @@ while (1)
     bCharging = oResult.Charging
   next
   iPercent = ((iRemaining / iFull) * 100) mod 100
-  if bCharging and (iPercent > 95) Then msgbox "Unplug Now!!! Battery is 95%", vbSystemModal
+  if bCharging and (iPercent > 95) Then msgbox "Unplug Now!!! Battery is 95%", vbSystemModal + vbInformation, "Battery Alert"
   wscript.sleep 30000 ' 5 minutes
 wend
